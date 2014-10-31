@@ -45,22 +45,22 @@ RTCの構成
 MIDIメッセージを受け取り，受け取ったデータをコンソール上に表示します．  
 
 * コンフィグレーション  
-```mode```  
+`mode`  
 MIDIメッセージの表示方法を指定します．  
-```configuration.active_config: <mode number>```  
+`configuration.active_config: <mode number>`  
  表示方法は以下の様なモードから選択することができます．  
-```0```:  
+`0`:  
 受け取ったMIDI::MIDIMessage型のデータ構造をそのまま表示します．  
 このモードではデータは見づらいですが，全てのデータを見ることができます．  
-```1```:   
+`1`:   
 受け取ったMIDI::MIDIMessage型のイベントを調べ，Note OnとNote Offの場合のみその情報を表示します．  
 このモードではMIDIデータの大半を占めるNote OnとNote Offを見ることができます．  
-```2```:  
+`2`:  
 受け取ったMIDI::MIDIMessage型のイベント名を表示します．  
 このモードではイベント名だしか表示されませんが，その分データ量は減るので可読性は向上します．   
  
  コンフィグレーションはonStartUpで読み込みます．  
- モードを変更する場合は，一度MIDIConsoleOutを終了し，コンフィグレーション変更後に再度実行して下さい．
+ モードを変更する場合は，一度MIDIConsoleOutを終了し，コンフィグレーション変更後に再度実行して下さい． 
 
 
 使い方：　MIDIParserを使用してテストする
